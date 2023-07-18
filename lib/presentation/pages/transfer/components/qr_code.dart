@@ -27,7 +27,7 @@ class QRCode extends StatelessWidget {
   // Adds an extra pixel in size to prevent gaps (default is true).
   final bool? gapLess;
   // `QrVersions.auto` or a value between 1 and 40.
- final int? qrVersion;
+  final int? qrVersion;
   // Padding on all sides
   final double? qrPadding;
   // Circular border radius beside the QR code
@@ -41,9 +41,10 @@ class QRCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_literals_to_create_immutables
     return ClipRRect(
       borderRadius: BorderRadius.circular(qrBorderRadius ?? 0),
-      child: QrImage(
+      child: QrImageView(
         size: qrSize,
         data: qrData,
         gapless: gapLess ?? true,
@@ -51,7 +52,6 @@ class QRCode extends StatelessWidget {
         padding: EdgeInsets.all(qrPadding ?? 10),
         semanticsLabel: semanticsLabel ?? '',
         backgroundColor: qrBackgroundColor ?? Colors.transparent,
-        foregroundColor: qrForegroundColor ?? Colors.black,
       ),
     );
   }

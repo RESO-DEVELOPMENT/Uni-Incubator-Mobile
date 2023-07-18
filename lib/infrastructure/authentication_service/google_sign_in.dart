@@ -43,7 +43,7 @@ class GoogleSignInService extends ChangeNotifier {
     notifyListeners();
   }
 
-  static Future<String>? getUserToken() {
+  static Future<String?>? getUserToken() {
     return FirebaseAuth.instance.currentUser?.getIdToken();
   }
 
