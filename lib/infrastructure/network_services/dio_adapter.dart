@@ -4,7 +4,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import '../authentication_service/auth_service.dart';
 
-const apiUrl = "https://api.uniinc-cnb.com";
+const apiUrl = "https://api-uni-incubator.reso.vn";
 
 final dio = Dio()
   ..options.baseUrl = apiUrl
